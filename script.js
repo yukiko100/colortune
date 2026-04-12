@@ -624,7 +624,7 @@ const updatePreview = () => {
     };
     
     if (mockupFontNames) {
-        mockupFontNames.innerText = `${getCleanFontName(config.jaHeadingFont)} / ${getCleanFontName(config.enHeadingFont)}`;
+        mockupFontNames.innerHTML = `<span class="font-name-ja">${getCleanFontName(config.jaHeadingFont)}</span><span class="font-name-separator"> / </span><span class="font-name-en">${getCleanFontName(config.enHeadingFont)}</span>`;
         mockupFontNames.style.color = txt.hex;
     }
     
