@@ -5,16 +5,16 @@
 // --- 1. Data Definitions ---
 
 const HUES = [
-    { id: '5r', label: 'レッド', defaultHex: '#E53935', baseHue: 3 },
-    { id: '5yr', label: 'オレンジ', defaultHex: '#F57C00', baseHue: 30, altHues: [36] },
-    { id: '5y', label: 'イエロー', defaultHex: '#FBC02D', baseHue: 48, altHues: [54] },
-    { id: '5gy', label: 'イエローグリーン', defaultHex: '#9CCC65', baseHue: 85, altHues: [65] },
-    { id: '5g', label: 'グリーン', defaultHex: '#43A047', baseHue: 130 },
-    { id: '5bg', label: 'ターコイズ', defaultHex: '#00897B', baseHue: 174 },
-    { id: '5b', label: 'ブルー', defaultHex: '#1E88E5', baseHue: 208, altHues: [199] },
-    { id: '5pb', label: 'インディゴ', defaultHex: '#3949AB', baseHue: 232 },
-    { id: '5p', label: 'パープル', defaultHex: '#8E24AA', baseHue: 285 },
-    { id: '5rp', label: 'ピンク', defaultHex: '#EC407A', baseHue: 340, altHues: [335] }
+    { id: '5r', label: 'Red', defaultHex: '#E53935', baseHue: 3 },
+    { id: '5yr', label: 'Orange', defaultHex: '#F57C00', baseHue: 30, altHues: [36] },
+    { id: '5y', label: 'Yellow', defaultHex: '#FBC02D', baseHue: 48, altHues: [54] },
+    { id: '5gy', label: 'Yellow-Green', defaultHex: '#9CCC65', baseHue: 85, altHues: [65] },
+    { id: '5g', label: 'Green', defaultHex: '#43A047', baseHue: 130 },
+    { id: '5bg', label: 'Turquoise', defaultHex: '#00897B', baseHue: 174 },
+    { id: '5b', label: 'Blue', defaultHex: '#1E88E5', baseHue: 208, altHues: [199] },
+    { id: '5pb', label: 'Indigo', defaultHex: '#3949AB', baseHue: 232 },
+    { id: '5p', label: 'Purple', defaultHex: '#8E24AA', baseHue: 285 },
+    { id: '5rp', label: 'Pink', defaultHex: '#EC407A', baseHue: 340, altHues: [335] }
 ];
 
 const THEMES = [
@@ -97,7 +97,7 @@ const CARD_THEME_CONFIGS = {
         lsBody: "0.01em"
     },
     natural: {
-        jaHeadingFont: "'Sawarabi Gothic', sans-serif",
+        jaHeadingFont: "'Zen Kurenaido', sans-serif",
         jaBodyFont: "'Sawarabi Gothic', sans-serif",
         enHeadingFont: "'Lora', serif",
         buttonFont: "'Noto Sans JP', sans-serif",

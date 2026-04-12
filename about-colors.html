@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>このアプリの色の仕組みについて</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --primary: #3b82f6;
+            --border: #e2e8f0;
+        }
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            transition: color 0.2s ease;
+        }
+        .back-link:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-top: 45px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+        p {
+            font-size: 0.95rem;
+            color: #334155;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+        hr {
+            border: none;
+            border-top: 1px dashed var(--border);
+            margin: 40px 0;
+        }
+        .btn-top {
+            display: inline-block;
+            background-color: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+        .btn-top:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 32px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            body { padding: 20px 15px; }
+            .container { padding: 30px 20px; }
+            h1 { font-size: 1.3rem; }
+            h2 { font-size: 1.05rem; margin-top: 35px; margin-bottom: 10px; }
+            p { font-size: 0.9rem; margin-bottom: 1.2rem; }
+            .back-link { font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← 戻る</a>
+        
+        <h1>このアプリの色の仕組みについて</h1>
+
+        <h2>■ カラー定義について</h2>
+        <p>本アプリでは、配色のベースとなる10色をあらかじめ定義しています。<br>
+        これらの色は、マンセル表色系の色相環を参考にしながら、デジタル上で扱いやすいように独自に調整したものです。</p>
+
+        <p>マンセル表色系は、色相・明度・彩度によって色を体系的に表現する手法ですが、本アプリではその考え方をベースにしつつ、ユーザーが直感的に「赤」「青」「緑」などと認識しやすい色味になるよう、HEX値で再構成しています。</p>
+
+        <p>そのため、表示されている色は厳密なマンセル値ではなく、「マンセルを参考にした近似色」となります。</p>
+
+        <hr>
+
+        <h2>■ 色の幅（バリエーション）について</h2>
+        <p>本アプリでは、より自然で実用的な配色を生成するために、一部の色相に対して「幅」を持たせています。</p>
+
+        <p>特に黄色や黄赤などの色は、わずかな違いで印象が大きく変わるため、単一の色に固定せず、近い範囲の色を複数含めたうえで配色を生成しています。</p>
+
+        <p>これにより、ユーザーが一般的にイメージする「明るい黄色」や「鮮やかなオレンジ」といった印象に近い配色を、より自然に再現できるようにしています。</p>
+
+        <hr>
+
+        <h2>■ 配色パターン（コントラスト型）について</h2>
+        <p>本アプリの「コントラスト型（使いやすい）」「コントラスト型（個性的）」では、選択した色の同系色に加えて、アクセントとしてコントラストのある色を組み合わせています。</p>
+
+        <p>このアクセントカラーには、色相環における「補色」または「補色に近い隣接色」を使用しています。<br>
+        これにより、視覚的にメリハリがありながらも、不自然になりすぎないバランスの配色を実現しています。</p>
+
+        <p>また、本アプリではアクセントカラーをあえて1色に絞っています。<br>
+        複数の強い色を組み合わせた配色（マルチカラー）は、自由度が高い反面、バランスを取るのが難しく、デザインに不慣れな方にとって扱いづらい場合があります。</p>
+
+        <p>そのため、「ベースとなる同系色 + アクセント1色」というシンプルな構成にすることで、誰でも扱いやすく、実用的な配色になるよう設計しています。</p>
+
+        <hr>
+
+        <h2>■ コントラスト型（B・C）の違いについて</h2>
+        <p>本アプリでは、コントラスト型の配色を2種類用意しています。</p>
+
+        <p>「B.コントラスト型（使いやすい）」は、補色または補色に近い色をベースにしつつ、彩度や明度をやや抑えた落ち着いたアクセントカラーを採用しています。<br>
+        コントラストを感じつつも主張が強すぎないため、幅広いデザインに取り入れやすい配色です。</p>
+
+        <p>一方、「C.コントラスト型（個性的）」は、より印象的な配色を目指し、アクセントカラーの彩度を高めた設計になっています。<br>
+        そのため、ネオンカラーのような鮮やかで視線を引きやすい色が選ばれることもあり、より強いインパクトを持つ配色が生成されます。</p>
+
+        <p>用途や目的に応じて、「使いやすさ」を重視するか、「印象の強さ」を重視するかで使い分けることができます。</p>
+
+        <hr>
+
+        <h2>■ この設計の目的</h2>
+        <p>本アプリは、専門的な色彩理論に詳しくない方でも、直感的に使えることを目的としています。<br>
+        そのため、理論の正確さだけでなく、「見たときに自然に感じる色」「実際のデザインで使いやすい色」を重視して設計しています。</p>
+
+        <div class="btn-container">
+            <a href="index.html" class="btn-top">トップに戻る</a>
+        </div>
+    </div>
+</body>
+</html>

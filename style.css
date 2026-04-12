@@ -853,3 +853,38 @@ h2 {
     justify-content: center;
     gap: 0.5rem;
 }
+
+/* 英語テキストのみを細くする */
+body {
+  font-family: 'Outfit', 'Noto Sans JP', sans-serif;
+}
+
+/* 英語部分（アルファベット）を優先的にOutfit Lightに */
+body {
+  font-weight: 400;
+}
+
+/* 英語用クラスがある場合は優先的に適用 */
+.en,
+span:lang(en),
+p:lang(en),
+h1:lang(en),
+h2:lang(en),
+h3:lang(en) {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+}
+
+/* 英語っぽいUI要素（ボタン・英語コピー）も少し軽く */
+button,
+.card button,
+.english,
+.subtitle-en {
+  font-weight: 300;
+}
+
+/* 日本語テキストの復旧 */
+h1, h2, h3, h4, h5, h6, p, span, div, li, td, th {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+}
