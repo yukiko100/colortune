@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,38 +9,41 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="app-container">
         <!-- Header -->
         <header class="app-header">
             <a href="index.html" class="color-wheel-link">
-              <svg width="50" height="50" viewBox="0 0 100 100">
-                <g transform="rotate(-90 50 50)">
-                  <circle cx="50" cy="10" r="6" fill="#E53935"/>
-                  <circle cx="73" cy="18" r="6" fill="#F57C00"/>
-                  <circle cx="88" cy="35" r="6" fill="#FBC02D"/>
-                  <circle cx="88" cy="65" r="6" fill="#9CCC65"/>
-                  <circle cx="73" cy="82" r="6" fill="#43A047"/>
-                  <circle cx="50" cy="90" r="6" fill="#00897B"/>
-                  <circle cx="27" cy="82" r="6" fill="#1E88E5"/>
-                  <circle cx="12" cy="65" r="6" fill="#3949AB"/>
-                  <circle cx="12" cy="35" r="6" fill="#8E24AA"/>
-                  <circle cx="27" cy="18" r="6" fill="#EC407A"/>
-                </g>
-              </svg>
+                <svg width="50" height="50" viewBox="0 0 100 100" aria-hidden="true">
+                    <circle cx="50" cy="12" r="6" fill="#E53935" />
+                    <circle cx="71.2" cy="18.9" r="6" fill="#F57C00" />
+                    <circle cx="84.2" cy="36.9" r="6" fill="#FBC02D" />
+                    <circle cx="84.2" cy="59.1" r="6" fill="#9CCC65" />
+                    <circle cx="71.2" cy="77.1" r="6" fill="#43A047" />
+                    <circle cx="50" cy="84" r="6" fill="#00897B" />
+                    <circle cx="28.8" cy="77.1" r="6" fill="#1E88E5" />
+                    <circle cx="15.8" cy="59.1" r="6" fill="#3949AB" />
+                    <circle cx="15.8" cy="36.9" r="6" fill="#8E24AA" />
+                    <circle cx="28.8" cy="18.9" r="6" fill="#EC407A" />
+                </svg>
             </a>
-            <h1 class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;" title="トップページへ戻る">ColorTune</h1>
-            <p class="subtitle">色とテーマから、イメージに合う配色を見つけましょう。</p>
+            <h1 class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;" title="トップページへ戻る">
+                ColorTune</h1>
+            <p class="subtitle">ベースカラーとテーマから、イメージに合う配色を見つけましょう。</p>
+            <p class="result-desc">※選択した色相をもとに、同系色とアクセントカラーを組み合わせたパレットを生成します</p>
             <p class="subtitle-en">Create color palettes that match your impression.</p>
         </header>
 
         <!-- Main Content Area -->
         <main class="main-content">
-            
+
             <!-- Step 1: Select Hue -->
             <section id="step-hue" class="step-section active">
                 <div class="step-header">
@@ -58,7 +62,10 @@
             <section id="step-theme" class="step-section hidden">
                 <div class="step-header">
                     <button class="back-btn" id="back-to-hue" aria-label="戻る">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7" />
+                        </svg>
                     </button>
                     <span class="step-badge">STEP 2</span>
                     <h2>なりたい印象（テーマ）を<br class="mobile-break">選んでください</h2>
@@ -72,7 +79,10 @@
             <section id="step-result" class="step-section hidden">
                 <div class="step-header result-header">
                     <button class="back-btn" id="back-to-theme" aria-label="戻る">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7" />
+                        </svg>
                     </button>
                     <div>
                         <h2>あなたのカラーパレット</h2>
@@ -88,13 +98,18 @@
                                 <h3>パレットを選択</h3>
                                 <p>3つの候補から、好みに近い案を選んでデザインイメージを確認できます。</p>
                                 <button id="btn-regenerate" class="btn btn-primary" style="margin-top: 1rem;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                                        <path d="M3 3v5h5" />
+                                    </svg>
                                     この条件でもう一度生成
                                 </button>
                             </div>
 
                             <!-- Unified Palette (A) -->
-                            <div class="palette-card selectable active-palette" id="card-unified" data-palette-type="unified">
+                            <div class="palette-card selectable active-palette" id="card-unified"
+                                data-palette-type="unified">
                                 <div class="palette-card-header">
                                     <h3>A. 統一型</h3>
                                     <p>同系色でまとまりやすい配色</p>
@@ -105,7 +120,8 @@
                             </div>
 
                             <!-- Contrast Palette (Easy) -->
-                            <div class="palette-card selectable" id="card-contrast-easy" data-palette-type="contrastEasy">
+                            <div class="palette-card selectable" id="card-contrast-easy"
+                                data-palette-type="contrastEasy">
                                 <div class="palette-card-header">
                                     <h3>B. コントラスト型（使いやすい）</h3>
                                     <p>コントラストはあるが扱いやすい配色</p>
@@ -116,7 +132,8 @@
                             </div>
 
                             <!-- Contrast Palette (Unique) -->
-                            <div class="palette-card selectable" id="card-contrast-unique" data-palette-type="contrastUnique">
+                            <div class="palette-card selectable" id="card-contrast-unique"
+                                data-palette-type="contrastUnique">
                                 <div class="palette-card-header">
                                     <h3>C. コントラスト型（個性的）</h3>
                                     <p>印象が強く、目を引きやすい配色</p>
@@ -127,24 +144,26 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="result-right">
                         <div class="preview-panel">
                             <h3 class="preview-title">選択中のデザインイメージ</h3>
-                            
+
                             <div class="preview-tabs">
                                 <button class="preview-tab-btn active" data-tab="preview-mockup">カードサンプル</button>
                                 <button class="preview-tab-btn" data-tab="preview-details">配色の詳細</button>
                             </div>
-                            
+
                             <div id="preview-mockup" class="preview-tab-content active">
                                 <div class="card-mockup" id="mockup-container">
                                     <div class="card-mockup-hero" id="mockup-hero">
                                         <h4 id="mockup-title">美しい配色を見つける</h4>
-                                        <p class="mockup-eyebrow" id="mockup-eyebrow">Color combinations shape the impression.</p>
+                                        <p class="mockup-eyebrow" id="mockup-eyebrow">Color combinations shape the
+                                            impression.</p>
                                     </div>
                                     <div class="card-mockup-body" id="mockup-body">
-                                        <p id="mockup-text">このテキストはダミーです。選択したパレットの背景色、テキスト色、アクセントカラーがどのように適用されるかを確認できます。</p>
+                                        <p id="mockup-text">このテキストはダミーです。選択したパレットの背景色、テキスト色、アクセントカラーがどのように適用されるかを確認できます。
+                                        </p>
                                         <button class="mockup-btn" id="mockup-btn">アクションボタン</button>
                                     </div>
                                     <div class="card-mockup-footer" id="mockup-footer">
@@ -155,11 +174,16 @@
                                     </div>
                                 </div>
                                 <button id="btn-download-card" class="btn btn-secondary download-btn">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                        <polyline points="7 10 12 15 17 10" />
+                                        <line x1="12" y1="15" x2="12" y2="3" />
+                                    </svg>
                                     PNG画像を保存
                                 </button>
                             </div>
-                            
+
                             <div id="preview-details" class="preview-tab-content">
                                 <div class="details-list" id="details-list">
                                     <!-- Details will be injected here -->
@@ -184,16 +208,17 @@
             </section>
 
         </main>
-        
+
         <footer class="app-footer">
             <p>&copy; 2026 Color Palette App</p>
         </footer>
     </div>
-    
+
     <!-- Toast Notification for Copy -->
-    <div id="toast" class="toast">コピーしました！    </div>
-    
+    <div id="toast" class="toast">コピーしました！ </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
