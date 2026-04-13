@@ -799,19 +799,24 @@ h2 {
     
     .result-actions {
         flex-direction: column;
-        padding-bottom: 5rem; /* 固定ボタンと被らないよう余白追加 */
+    }
+
+      /* STEP3全体の下に十分な余白を作る */
+    #step-result {
+    padding-bottom: 120px;
     }
     
     #btn-regenerate {
-        position: fixed;
-        bottom: 1.5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        max-width: 400px;
-        z-index: 100;
-        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+        position: fixed !important;
+        left: 16px !important;
+        right: 16px !important;
+        bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+        width: auto !important;
+        max-width: none !important;
+        transform: none !important;
+        z-index: 9999 !important;
         margin-top: 0 !important;
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
     }
     
     .hue-grid {
