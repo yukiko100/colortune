@@ -929,3 +929,40 @@ background-image:
   background-size: 15px 15px, auto, auto, auto;
   background-attachment: fixed;
 }
+
+
+/* ▼モバイル表示のボタン固定用上書き追加ルール */
+@media (max-width: 768px) {
+  /* Safari対策：fixed を壊しやすい transform / animation を止める */
+  #step-result,
+  #step-result.active {
+    transform: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  /* 念のため main 側も transform 影響を受けないようにする */
+  .main-content,
+  .app-container {
+    transform: none !important;
+  }
+
+  /* 再生成ボタンを確実に画面下へ固定 */
+  #btn-regenerate {
+    position: fixed !important;
+    left: 16px !important;
+    right: 16px !important;
+    bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 9999 !important;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+  }
+
+  /* 固定ボタンと本文が重ならないようにする */
+  #step-result {
+    padding-bottom: 120px !important;
+  }
+}
