@@ -110,7 +110,7 @@ const CARD_THEME_CONFIGS = {
 const CARD_TEXTS = {
     layout: "center",
     eyebrow: "Color combinations<br>shape the impression.",
-    heading: "色の組み合わせで、<br>印象は大きく変わる。",
+    heading: "色の組み合わせで<br>印象は大きく変わる",
     body: "配色のバランスやコントラストによって、伝わるイメージは大きく変化します。目的に合った色選びが、デザインの質を高めます。",
     button: "Color Balance"
 };

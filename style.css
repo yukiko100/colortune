@@ -11,7 +11,7 @@
     /* Layout */
     --max-width: 1000px;
     --radius-sm: 8px;
-    --radius-md: 16px;
+    --radius-md: 10px;
     --radius-lg: 24px;
     
     /* Animation */
@@ -799,6 +799,19 @@ h2 {
     
     .result-actions {
         flex-direction: column;
+        padding-bottom: 5rem; /* 固定ボタンと被らないよう余白追加 */
+    }
+    
+    #btn-regenerate {
+        position: fixed;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 400px;
+        z-index: 100;
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+        margin-top: 0 !important;
     }
     
     .hue-grid {
